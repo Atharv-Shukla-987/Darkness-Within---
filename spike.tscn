@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://caaoi4b2ms065"]
+
+[ext_resource type="Texture2D" uid="uid://1akvjfd7x38r" path="res://assets/spike.png" id="1_7k7bx"]
+[ext_resource type="Script" uid="uid://batp2h48l0kph" path="res://scripts/killzone.gd" id="2_tggh8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5sso0"]
+atlas = ExtResource("1_7k7bx")
+region = Rect2(0, 0, 21, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_13jd2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5sso0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p45v3"]
+size = Vector2(97.5, 20.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x5qbj"]
+radius = 14.0
+height = 48.0
+
+[node name="spike" type="Node2D" unique_id=1311561578]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=260713385]
+position = Vector2(71, -30)
+scale = Vector2(6.166667, 4.5952377)
+sprite_frames = SubResource("SpriteFrames_13jd2")
+
+[node name="killzone" type="Area2D" parent="." unique_id=2111459033]
+script = ExtResource("2_tggh8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=1189764801]
+position = Vector2(59.25, -10.75)
+shape = SubResource("RectangleShape2D_p45v3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="killzone" unique_id=2014014351]
+position = Vector2(58, -27)
+shape = SubResource("CapsuleShape2D_x5qbj")

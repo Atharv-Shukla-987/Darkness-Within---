@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bhgw7rqks6584"]
+
+[ext_resource type="Texture2D" uid="uid://pbsh26sa7r8p" path="res://assets/Mossy Tileset/Mossy - TileSet.png" id="1_wtcfe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
+atlas = ExtResource("1_wtcfe")
+region = Rect2(0, 219, 170, 73)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_epypp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e48y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=2128913821]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=924236663]
+sprite_frames = SubResource("SpriteFrames_epypp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1534975890]
