@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bnes3bghc2i3c"]
+
+[ext_resource type="Texture2D" uid="uid://b3s45yys461ti" path="res://assets/Lizard.png" id="1_54phe"]
+[ext_resource type="Script" uid="uid://batp2h48l0kph" path="res://scripts/killzone.gd" id="2_cwtwn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8mmv"]
+atlas = ExtResource("1_54phe")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6giox"]
+atlas = ExtResource("1_54phe")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suscj"]
+atlas = ExtResource("1_54phe")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aygu1"]
+atlas = ExtResource("1_54phe")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4vpke"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8mmv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6giox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_suscj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aygu1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1apqd"]
+radius = 6.708204
+
+[node name="lizz" type="Node2D" unique_id=195242371]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1333070262]
+sprite_frames = SubResource("SpriteFrames_4vpke")
+frame_progress = 0.49903482
+
+[node name="Area2D" type="Area2D" parent="." unique_id=802938605]
+script = ExtResource("2_cwtwn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=186364416]
+position = Vector2(1, 2)
+shape = SubResource("CircleShape2D_1apqd")

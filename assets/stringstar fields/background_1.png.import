@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0nk6n2fid7fd"
-path="res://.godot/imported/13 - spetial dash.png-914e37adedb744a071950536bb0da5a6.ctex"
+uid="uid://b3kwqmbasq4an"
+path="res://.godot/imported/background_1.png-e5ed1356f72444865a220e3e4155a0ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/13 - spetial dash.png"
-dest_files=["res://.godot/imported/13 - spetial dash.png-914e37adedb744a071950536bb0da5a6.ctex"]
+source_file="res://assets/stringstar fields/background_1.png"
+dest_files=["res://.godot/imported/background_1.png-e5ed1356f72444865a220e3e4155a0ad.ctex"]
 
 [params]
 

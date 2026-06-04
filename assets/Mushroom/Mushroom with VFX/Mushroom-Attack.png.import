@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0nk6n2fid7fd"
-path="res://.godot/imported/13 - spetial dash.png-914e37adedb744a071950536bb0da5a6.ctex"
+uid="uid://c15s0ibnspve"
+path="res://.godot/imported/Mushroom-Attack.png-9d7ff63cf4197a9ec8765c11119c51da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/13 - spetial dash.png"
-dest_files=["res://.godot/imported/13 - spetial dash.png-914e37adedb744a071950536bb0da5a6.ctex"]
+source_file="res://assets/Mushroom/Mushroom with VFX/Mushroom-Attack.png"
+dest_files=["res://.godot/imported/Mushroom-Attack.png-9d7ff63cf4197a9ec8765c11119c51da.ctex"]
 
 [params]
 

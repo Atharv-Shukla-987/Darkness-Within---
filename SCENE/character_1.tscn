@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bpr5pauxwqrns"]
 
-[ext_resource type="Script" uid="uid://ct35p563njwys" path="res://character_1.gd" id="1_47u2g"]
+[ext_resource type="Script" uid="uid://ct35p563njwys" path="res://scripts/character_1.gd" id="1_47u2g"]
 [ext_resource type="Texture2D" uid="uid://q4q7hlybbieo" path="res://assets/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/10 - attack 1.png" id="1_er2jp"]
 [ext_resource type="Texture2D" uid="uid://csaxh83xu65mk" path="res://assets/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/6 - dash.png" id="1_pw62m"]
 [ext_resource type="Texture2D" uid="uid://rbyp8leh7fr1" path="res://assets/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/11 - attack 3.png" id="2_47u2g"]
@@ -12,7 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://dslirbtd78vh1" path="res://assets/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/12 - dash attack.png" id="5_tdsxo"]
 [ext_resource type="Texture2D" uid="uid://chqkb3worinmw" path="res://assets/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/7 - jump-up-attack.png" id="5_yy2sw"]
 [ext_resource type="Texture2D" uid="uid://dfxpjsc1ipqd3" path="res://assets/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/15 - death.png" id="6_q1jg6"]
-[ext_resource type="Texture2D" uid="uid://c3ks631xho23e" path="res://assets/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/13 - spetial dash.png" id="7_02bek"]
+[ext_resource type="Texture2D" uid="uid://b0nk6n2fid7fd" path="res://assets/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/13 - spetial dash.png" id="7_02bek"]
+[ext_resource type="Texture2D" uid="uid://rur74cvbcb73" path="res://assets/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/4 - mid-air.png" id="8_tdsxo"]
+[ext_resource type="Texture2D" uid="uid://djfb3g3jbj3hu" path="res://assets/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/5 - fall.png" id="9_q1jg6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_knkke"]
 atlas = ExtResource("1_er2jp")
@@ -118,6 +120,26 @@ region = Rect2(1920, 0, 240, 128)
 atlas = ExtResource("6_q1jg6")
 region = Rect2(2160, 0, 240, 128)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_yp22b"]
+atlas = ExtResource("8_tdsxo")
+region = Rect2(0, 0, 240, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tc6a5"]
+atlas = ExtResource("9_q1jg6")
+region = Rect2(0, 0, 240, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16onk"]
+atlas = ExtResource("9_q1jg6")
+region = Rect2(240, 0, 240, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4t4e"]
+atlas = ExtResource("9_q1jg6")
+region = Rect2(480, 0, 240, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooeyq"]
+atlas = ExtResource("9_q1jg6")
+region = Rect2(720, 0, 240, 128)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_er2jp"]
 atlas = ExtResource("2_jb520")
 region = Rect2(0, 0, 240, 128)
@@ -165,6 +187,10 @@ region = Rect2(2400, 0, 240, 128)
 [sub_resource type="AtlasTexture" id="AtlasTexture_upv6r"]
 atlas = ExtResource("2_jb520")
 region = Rect2(2640, 0, 240, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lg6ea"]
+atlas = ExtResource("8_tdsxo")
+region = Rect2(0, 0, 240, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h3ol6"]
 atlas = ExtResource("3_7mk00")
@@ -246,10 +272,6 @@ region = Rect2(1440, 0, 240, 128)
 atlas = ExtResource("4_bi1wl")
 region = Rect2(1680, 0, 240, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tm35q"]
-atlas = ExtResource("7_02bek")
-region = Rect2(0, 0, 240, 128)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_8e1cf"]
 atlas = ExtResource("7_02bek")
 region = Rect2(240, 0, 240, 128)
@@ -278,8 +300,8 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cpmau")
 }],
-"loop": true,
-"name": &"atk 1 ",
+"loop": false,
+"name": &"atk1",
 "speed": 5.0
 }, {
 "frames": [{
@@ -298,7 +320,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qrj1j")
 }],
-"loop": true,
+"loop": false,
 "name": &"atk2",
 "speed": 5.0
 }, {
@@ -306,7 +328,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mrrtb")
 }],
-"loop": true,
+"loop": false,
 "name": &"damage",
 "speed": 5.0
 }, {
@@ -323,9 +345,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_k764p")
 }],
-"loop": true,
+"loop": false,
 "name": &"dash",
-"speed": 8.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -337,7 +359,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_udmjl")
 }],
-"loop": true,
+"loop": false,
 "name": &"dash attack",
 "speed": 5.0
 }, {
@@ -372,9 +394,29 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bbuw5")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yp22b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tc6a5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16onk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4t4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ooeyq")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -419,6 +461,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_lg6ea")
+}],
+"loop": false,
+"name": &"inair ",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_h3ol6")
 }, {
 "duration": 1.0,
@@ -447,7 +497,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fnq7w")
 }],
-"loop": true,
+"loop": false,
 "name": &"jumpdown attack",
 "speed": 5.0
 }, {
@@ -464,7 +514,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_eyiyq")
 }],
-"loop": true,
+"loop": false,
 "name": &"jumpup attack",
 "speed": 5.0
 }, {
@@ -499,9 +549,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tm35q")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_8e1cf")
 }, {
 "duration": 1.0,
@@ -513,7 +560,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7jlbh")
 }],
-"loop": true,
+"loop": false,
 "name": &"special dash",
 "speed": 5.0
 }]
@@ -522,15 +569,23 @@ animations = [{
 radius = 5.0
 height = 34.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdsxo"]
+size = Vector2(68, 25)
+
 [node name="character 1" type="CharacterBody2D" unique_id=959742854]
 script = ExtResource("1_47u2g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1496238906]
-position = Vector2(1, 2)
+position = Vector2(1, -1)
 sprite_frames = SubResource("SpriteFrames_rij5s")
-animation = &"idle"
+animation = &"atk1"
 autoplay = "idle"
-frame_progress = 0.28467044
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2033791955]
 shape = SubResource("CapsuleShape2D_er2jp")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=934073240]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=227642170]
+position = Vector2(48, 1.5)
+shape = SubResource("RectangleShape2D_tdsxo")

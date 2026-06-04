@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://6ce63e3vfjrp"]
+
+[ext_resource type="PackedScene" uid="uid://bpr5pauxwqrns" path="res://SCENE/character_1.tscn" id="1_wyrjx"]
+[ext_resource type="PackedScene" path="res://test/level_template.tscn" id="2_ibcno"]
+
+[node name="Node2D" type="Node2D" unique_id=1339804171]
+
+[node name="character 1" parent="." unique_id=959742854 instance=ExtResource("1_wyrjx")]
+position = Vector2(-5, -37)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=997558899]
+
+[node name="level template" parent="." unique_id=474795114 instance=ExtResource("2_ibcno")]
+
+[node name="Polygon2D" parent="level template" index="0" unique_id=1970199386]
+polygon = PackedVector2Array(-350, 52, -238, 163, 96, 137, 387, 101, 503, -42, 747, -107, 1025, -88, 1079, 75, -210, 251, -412, 163)
+
+[editable path="level template"]
