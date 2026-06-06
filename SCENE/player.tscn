@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bpr5pauxwqrns"]
 
-[ext_resource type="Script" uid="uid://ct35p563njwys" path="res://scripts/character_1.gd" id="1_47u2g"]
+[ext_resource type="Script" uid="uid://ct35p563njwys" path="res://scripts/player.gd" id="1_47u2g"]
 [ext_resource type="Texture2D" uid="uid://q4q7hlybbieo" path="res://assets/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/10 - attack 1.png" id="1_er2jp"]
 [ext_resource type="Texture2D" uid="uid://csaxh83xu65mk" path="res://assets/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/6 - dash.png" id="1_pw62m"]
 [ext_resource type="Texture2D" uid="uid://rbyp8leh7fr1" path="res://assets/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/11 - attack 3.png" id="2_47u2g"]
@@ -572,7 +572,7 @@ height = 34.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tdsxo"]
 size = Vector2(68, 25)
 
-[node name="character 1" type="CharacterBody2D" unique_id=959742854]
+[node name="player" type="CharacterBody2D" unique_id=959742854 groups=["player"]]
 script = ExtResource("1_47u2g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1496238906]
