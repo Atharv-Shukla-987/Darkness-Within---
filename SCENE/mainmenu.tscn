@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://cmimx3txs8yrb"]
+
+[ext_resource type="Script" uid="uid://cyydmltkncng8" path="res://scripts/mainmenu.gd" id="1_m1mhq"]
+[ext_resource type="Texture2D" uid="uid://1ca4r5iv6vna" path="res://assets/sprites/SHADOW Series - Free Ui/borders/Sprite/border 1.png" id="1_r1fqx"]
+[ext_resource type="Texture2D" uid="uid://pqegwqem7lmf" path="res://assets/—Pngtree—futuristic sci-fi modern empty stage_1179002.jpg" id="2_27ory"]
+[ext_resource type="PackedScene" uid="uid://lmp4m36gutnt" path="res://SCENE/options.tscn" id="3_jwdn8"]
+
+[sub_resource type="SystemFont" id="SystemFont_r1fqx"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_m1mhq"]
+font_names = PackedStringArray("Copperplate Gothic")
+
+[node name="mainmenu" type="Control" unique_id=1325367818 groups=["player"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m1mhq")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=614882585]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 33.0
+offset_top = 9.0
+offset_right = -47.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_27ory")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1841018916]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_r1fqx")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2058052302]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2110096251]
+layout_mode = 2
+theme_override_constants/separation = 109
+
+[node name="sep" type="Control" parent="MarginContainer/VBoxContainer" unique_id=687389693]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1608307176]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = SubResource("SystemFont_r1fqx")
+theme_override_font_sizes/font_size = 69
+text = "GAME MENU
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=2031763957]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=363560123]
+layout_mode = 2
+theme_override_constants/separation = 29
+alignment = 1
+
+[node name="START" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1867072200]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_m1mhq")
+theme_override_font_sizes/font_size = 36
+text = "START GAME"
+
+[node name="SETTINGS" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1772749254]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_m1mhq")
+theme_override_font_sizes/font_size = 36
+text = "SETTINGS"
+
+[node name="EXIT" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=254439285]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_m1mhq")
+theme_override_font_sizes/font_size = 36
+text = "EXIT"
+
+[node name="options" parent="." unique_id=2079504685 instance=ExtResource("3_jwdn8")]
+visible = false
+layout_mode = 1

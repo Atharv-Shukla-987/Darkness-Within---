@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://cmimx3txs8yrb"]
+
+[ext_resource type="Texture2D" uid="uid://1ca4r5iv6vna" path="res://assets/SHADOW Series - Free Ui/borders/Sprite/border 1.png" id="1_r1fqx"]
+[ext_resource type="PackedScene" uid="uid://lmp4m36gutnt" path="res://SCENE/options.tscn" id="3_jwdn8"]
+
+[sub_resource type="GDScript" id="GDScript_m1mhq"]
+resource_local_to_scene = true
+script/source = "class_name mainmenu
+extends Control
+
+
+@onready var start: Button = $MarginContainer/HBoxContainer/VBoxContainer/START as Button
+@onready var settings: Button = $MarginContainer/HBoxContainer/VBoxContainer/SETTINGS as Button
+@onready var exit: Button = $MarginContainer/HBoxContainer/VBoxContainer/EXIT as Button
+@onready var options: optionmenu = $options as optionmenu
+@onready var margin_container: MarginContainer = $MarginContainer as MarginContainer
+
+
+
+@export var firstlevel = preload(\"res://SCENE/levels/level_1.tscn\")
+
+
+
+
+func _ready() -> void:
+	handlesignal()
+	
+	
+	
+func on_button_down() -> void:
+	get_tree().change_scene_to_packed(firstlevel)
+	
+	
+func on_exit_pressed() -> void:
+	get_tree().quit()
+	
+	
+	
+
+
+func handlesignal() -> void:
+	start.button_down.connect(on_button_down)
+	exit.button_down.connect(on_exit_pressed)
+	settings.button_down.connect(on_setting_pressed)
+	options.exitoption.connect(on_exit_options_menuu)
+	
+	
+	
+	
+func on_setting_pressed() -> void:
+	margin_container.visible =  false
+	options.set_process(true )  
+	options.visible = true
+	
+	
+	
+	
+func on_exit_options_menuu() -> void:
+	margin_container.visible = true
+	options.visible= false
+"
+
+[sub_resource type="SystemFont" id="SystemFont_r1fqx"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_m1mhq"]
+font_names = PackedStringArray("Copperplate Gothic")
+
+[node name="mainmenu" type="Control" unique_id=1325367818]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_m1mhq")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1841018916]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_r1fqx")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2058052302]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2110096251]
+layout_mode = 2
+theme_override_constants/separation = 109
+
+[node name="sep" type="Control" parent="MarginContainer/VBoxContainer" unique_id=687389693]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1608307176]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = SubResource("SystemFont_r1fqx")
+theme_override_font_sizes/font_size = 69
+text = "GAME MENU
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=2031763957]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=363560123]
+layout_mode = 2
+theme_override_constants/separation = 29
+alignment = 1
+
+[node name="START" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1867072200]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_m1mhq")
+theme_override_font_sizes/font_size = 36
+text = "START GAME"
+
+[node name="SETTINGS" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1772749254]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_m1mhq")
+theme_override_font_sizes/font_size = 36
+text = "SETTINGS"
+
+[node name="EXIT" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=254439285]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_m1mhq")
+theme_override_font_sizes/font_size = 36
+text = "EXIT"
+
+[node name="options" parent="." unique_id=2079504685 instance=ExtResource("3_jwdn8")]
+visible = false
+layout_mode = 1

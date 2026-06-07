@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="darkness within"
-run/main_scene="uid://bpr5pauxwqrns"
+run/main_scene="uid://cmimx3txs8yrb"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+eventcontrollr="*uid://vp0kxwre0vf8"
+Gamecontoll="*uid://y2qyc28fqw2s"
 
 [editor_plugins]
 

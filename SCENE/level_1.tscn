@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://ftkv05cwva5t"]
-
-[ext_resource type="PackedScene" uid="uid://bp64slskagvgc" path="res://SCENE/levelblueprint.tscn" id="1_x33xn"]
-
-[node name="LEVEL1" unique_id=1240564884 instance=ExtResource("1_x33xn")]
-
-[node name="Area2D" parent="." index="5" unique_id=762294064]
-position = Vector2(3089, -639)

@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://lmp4m36gutnt"]
+
+[ext_resource type="Script" uid="uid://2fi0wcl4l3px" path="res://scripts/options.gd" id="1_67xpk"]
+[ext_resource type="Texture2D" uid="uid://cn6r14x2fpal2" path="res://assets/sprites/SHADOW Series - Free Ui/borders/Sprite/border 3.png" id="1_nfdj3"]
+[ext_resource type="Texture2D" uid="uid://pqegwqem7lmf" path="res://assets/—Pngtree—futuristic sci-fi modern empty stage_1179002.jpg" id="2_rnaxv"]
+
+[sub_resource type="SystemFont" id="SystemFont_4jjp4"]
+font_names = PackedStringArray("Impact")
+font_italic = true
+subpixel_positioning = 0
+
+[node name="options" type="Control" unique_id=2079504685]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_67xpk")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1419683736]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 50.0
+offset_right = 1081.0
+offset_bottom = 606.0
+texture = ExtResource("2_rnaxv")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2073490107]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nfdj3")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=190395851]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1403934186]
+layout_mode = 2
+theme_override_constants/separation = -50
+
+[node name="heading" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1643294487]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = SubResource("SystemFont_4jjp4")
+theme_override_font_sizes/font_size = 50
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1956465791]
+custom_minimum_size = Vector2(200.9, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+text = "back "
