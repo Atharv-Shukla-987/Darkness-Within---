@@ -27,3 +27,6 @@ position = Vector2(1573, -187)
 
 [node name="coins4" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="5" unique_id=568403377]
 position = Vector2(1531, -186)
+
+[node name="coins9" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="9" unique_id=360058614]
+position = Vector2(-1829, -146)
