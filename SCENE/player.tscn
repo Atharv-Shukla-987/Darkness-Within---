@@ -15,6 +15,11 @@
 [ext_resource type="Texture2D" uid="uid://b0nk6n2fid7fd" path="res://assets/sprites/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/13 - spetial dash.png" id="7_02bek"]
 [ext_resource type="Texture2D" uid="uid://rur74cvbcb73" path="res://assets/sprites/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/4 - mid-air.png" id="8_tdsxo"]
 [ext_resource type="Texture2D" uid="uid://djfb3g3jbj3hu" path="res://assets/sprites/SHADOW Series - The Blind Huntress v1.1/SHADOW Series - The Blind Huntress/Sprite Sheet/5 - fall.png" id="9_q1jg6"]
+[ext_resource type="AudioStream" uid="uid://bronr8jycid8k" path="res://assets/music/swordswing.mp3" id="16_1ur7j"]
+[ext_resource type="AudioStream" uid="uid://bmauoniuiqbgq" path="res://assets/music/dash.mp3" id="17_cdp5n"]
+[ext_resource type="AudioStream" uid="uid://be1y5u14p7x4s" path="res://assets/music/jump.mp3" id="18_rn85x"]
+[ext_resource type="AudioStream" uid="uid://cpm60wdsrnhc4" path="res://assets/music/running.mp3" id="19_t0dhu"]
+[ext_resource type="AudioStream" uid="uid://dxqs4la00tv0g" path="res://assets/music/spcdash.mp3" id="20_50bwr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_knkke"]
 atlas = ExtResource("1_er2jp")
@@ -589,3 +594,18 @@ shape = SubResource("CapsuleShape2D_er2jp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=227642170]
 position = Vector2(48, 1.5)
 shape = SubResource("RectangleShape2D_tdsxo")
+
+[node name="atk" type="AudioStreamPlayer" parent="." unique_id=1722813457]
+stream = ExtResource("16_1ur7j")
+
+[node name="dash" type="AudioStreamPlayer" parent="." unique_id=547925293]
+stream = ExtResource("17_cdp5n")
+
+[node name="jump" type="AudioStreamPlayer" parent="." unique_id=595366596]
+stream = ExtResource("18_rn85x")
+
+[node name="running" type="AudioStreamPlayer" parent="." unique_id=674634488]
+stream = ExtResource("19_t0dhu")
+
+[node name="spcdash" type="AudioStreamPlayer" parent="." unique_id=1613127023]
+stream = ExtResource("20_50bwr")

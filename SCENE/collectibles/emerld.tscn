@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://b1c1y45sns8ix"]
 
+[ext_resource type="Script" uid="uid://xti536c5o11o" path="res://scripts/emerld.gd" id="1_k7k5c"]
 [ext_resource type="Texture2D" uid="uid://bt7hxwgnh3nku" path="res://assets/collectibles/gem/gem.png" id="1_u8uqx"]
+[ext_resource type="AudioStream" uid="uid://uff8am56ou1c" path="res://assets/music/ribhavagrawal-coin-recieved-230517_OhuPPBRz.mp3" id="3_4ueq8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k7k5c"]
 atlas = ExtResource("1_u8uqx")
@@ -46,11 +48,14 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_18ja5"]
-radius = 3.1622777
+radius = 7.28011
 
 [node name="emerld" type="Node2D" unique_id=532289138]
+script = ExtResource("1_k7k5c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1096058854]
+position = Vector2(-1.9999981, -2.0000005)
+scale = Vector2(2.0625, 1.8749999)
 sprite_frames = SubResource("SpriteFrames_tchnk")
 autoplay = "default"
 frame_progress = 0.8327362
@@ -58,5 +63,10 @@ frame_progress = 0.8327362
 [node name="Area2D" type="Area2D" parent="." unique_id=114796445]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2040992730]
-position = Vector2(1, 1)
+position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_18ja5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1606125262]
+stream = ExtResource("3_4ueq8")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

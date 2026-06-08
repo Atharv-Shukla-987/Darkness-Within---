@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cbxdp6s31odie" path="res://scripts/levelupdater.gd" id="1_poxgj"]
 [ext_resource type="Texture2D" uid="uid://dq3a7q2cuqx1t" path="res://assets/Portal_100x100px.png" id="2_qj82e"]
+[ext_resource type="AudioStream" uid="uid://lqnxgpoocsvs" path="res://assets/music/portal_[cut_1sec].mp3" id="3_bub6u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qj82e"]
 radius = 21.213203
@@ -313,5 +314,8 @@ position = Vector2(73, -37)
 sprite_frames = SubResource("SpriteFrames_rgdyv")
 autoplay = "default"
 frame_progress = 0.15706736
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1448204443]
+stream = ExtResource("3_bub6u")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

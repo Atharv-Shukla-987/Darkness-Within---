@@ -9,3 +9,21 @@ tile_map_data = PackedByteArray("AADl/wQAAAAHAAgAABDm/wQAAAAGAAgAABDn/wQAAAAFAAg
 
 [node name="Area2D" parent="." index="5" unique_id=762294064]
 position = Vector2(-3863, -1750)
+
+[node name="coins" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="0" unique_id=1242531394]
+position = Vector2(1450, -189)
+
+[node name="coins10" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="1" unique_id=445102111]
+position = Vector2(1669, -189)
+
+[node name="coins2" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="2" unique_id=1199760404]
+position = Vector2(1612, -194)
+
+[node name="coins5" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="3" unique_id=486057370]
+position = Vector2(1487, -188)
+
+[node name="coins3" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="4" unique_id=1882324879]
+position = Vector2(1573, -187)
+
+[node name="coins4" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="5" unique_id=568403377]
+position = Vector2(1531, -186)

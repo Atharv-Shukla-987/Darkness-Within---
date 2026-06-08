@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ea2qosts53e"]
 
 [ext_resource type="Texture2D" uid="uid://dhn6b5cxyud1k" path="res://assets/collectibles/diamond/diamond.png" id="1_ml6fr"]
+[ext_resource type="Script" uid="uid://bwppb5basnkl7" path="res://scripts/diamond.gd" id="1_t7rfn"]
+[ext_resource type="AudioStream" uid="uid://uff8am56ou1c" path="res://assets/music/ribhavagrawal-coin-recieved-230517_OhuPPBRz.mp3" id="3_qsl4u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t7rfn"]
 atlas = ExtResource("1_ml6fr")
@@ -46,20 +48,25 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d3ps2"]
-radius = 3.0
-height = 10.0
+radius = 12.0
+height = 26.0
 
 [node name="diamond" type="Node2D" unique_id=1823843863]
+script = ExtResource("1_t7rfn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1328221589]
-position = Vector2(0, -1)
-scale = Vector2(1.25, 1.15625)
+position = Vector2(9.536743e-07, -1.999999)
+scale = Vector2(2.5, 2.203125)
 sprite_frames = SubResource("SpriteFrames_hx00y")
 autoplay = "default"
-frame_progress = 0.5346982
+frame_progress = 0.3301502
 
 [node name="Area2D" type="Area2D" parent="." unique_id=841944006]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1143421887]
-position = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_d3ps2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1358504674]
+stream = ExtResource("3_qsl4u")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

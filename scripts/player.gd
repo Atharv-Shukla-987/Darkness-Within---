@@ -1,4 +1,6 @@
+class_name player
 extends CharacterBody2D
+
 
 var speed : float = 200.0
 var jumppower : float = -500
@@ -28,6 +30,16 @@ var hitboxoffset : Vector2
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 @onready var hitbox: Area2D = $hitbox
+
+@onready var spcccdash: AudioStreamPlayer = $spcdash
+@onready var running: AudioStreamPlayer = $running
+@onready var jump: AudioStreamPlayer = $jump
+@onready var dash: AudioStreamPlayer = $dash
+@onready var atk: AudioStreamPlayer = $atk
+
+
+
+
 
 
 
@@ -113,6 +125,7 @@ func _handle_movement() -> void:
 		if dir!= 0.0 :
 			if state not in [states.ATK1,states.ATK2]:
 				_setstates(states.RUN)
+				
 		else:
 			_setstates(states.IDLE)
 			
@@ -122,6 +135,7 @@ func _handlejump() -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jumppower
 		_setstates(states.JUMP)
+		jump.play()
 		
 		
 func _handleattack() -> void:
@@ -136,14 +150,18 @@ func _handleattack() -> void:
 		if not is_on_floor():
 			if Input.is_action_pressed("ui_up"):
 				_setstates(states.JUMPATKUP)
+				atk.play()
 			elif Input.is_action_pressed("ui_down"):
 				_setstates(states.JUMPATKDOWN)
+				atk.play()
 			else:
 				_setstates(states.ATK1)
+				atk.play()
 		else:
 			if state in [states.IDLE,states.RUN]:
 				atkcombo = 1
 				_setstates(states.ATK1)
+				atk.play()
 			elif state == states.ATK1:
 					attakbuffer = true
 
@@ -164,8 +182,12 @@ func _dash(special:bool) -> void :
 	velocity.y = 0.0
 	if special:
 		spcdashcooldown  = spcdashcooldowntime
-	else:dashcooldown = dashcooldowntime
+	else:
+		dashcooldown = dashcooldowntime
 	_setstates(states.SPCDASH if special else states.DASH)	
+	if special :
+		spcccdash.play()
+	else: dash.play()
 	
 	
 	
@@ -176,7 +198,8 @@ func _dashmovementhandled (delta:float)-> void :
 	velocity.y =0
 	if not isspedashing and Input.is_action_just_pressed("attack"):
 		isdashing = false
-		_setstates(states.DASHATK)	
+		_setstates(states.DASHATK)
+		atk.play()	
 	if dashtimmer <= 0.0 :
 		isdashing = false
 		_returntoidleorrun()
@@ -245,6 +268,7 @@ func _onanimationfinished() -> void:
 				attakbuffer = false
 				atkcombo = 0
 				_setstates(states.ATK2)
+				atk.play()
 			else:
 				atkcombo = 0
 				_returntoidleorrun()
@@ -280,6 +304,7 @@ func _returntoidleorrun() -> void:
 	var dir := Input.get_axis("ui_left","ui_right")
 	if is_on_floor()and dir !=0.0:
 		_setstates(states.RUN)
+		
 	else:
 		_setstates(states.IDLE)
 	

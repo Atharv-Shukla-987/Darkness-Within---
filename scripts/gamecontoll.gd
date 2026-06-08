@@ -1,11 +1,19 @@
 extends Node
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var totalcoins = 0
+var totadiamond = 0
+var totalemerld = 0
+func coincollected(value:int):
+	totalcoins = totalcoins + value
+	print("emitting coin_collected with: ", totalcoins)
+	eventcontrollr.emit_signal("coin_collected", totalcoins)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func diamondcollected(value: int):
+	totadiamond = totadiamond + value
+	eventcontrollr.emit_signal("diamond_collected", totadiamond)  
+
+func emerldcollected(value:int):
+	totalemerld = totalemerld + value
+	eventcontrollr.emit_signal("emerald_collected", totalemerld)
