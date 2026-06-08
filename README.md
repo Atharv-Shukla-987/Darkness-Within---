@@ -39,6 +39,37 @@ In it you have fight mosters and collect coins , emeraleds , diamonds and clear 
     Coins
     diamod
     Emerald
+
+
+
+
+##CONTROLS
+
+LEFT ARROW  =  LEFT MOVEMENT
+RIGHT ARROW = RIGHT MOVEMENT
+SPACE = JUMP
+Q = DASH
+Z = SPECIAL DASH
+JUMP + ARROW UP = ATTACK UP 
+JUMP + ARROW DOWN = ATTACK DOWN
+Q +  LEFT CLICK MOUSE = DASH ATTACK
+
+LEFT CLCIK MOUSE ONCE = ATTACK 1 ( LIGHT ATTACK )
+LIFT CLICK MOUSE TWICE = ATTACK 2 (HEAVY ATTACK )
+
+
+
+
+
+
+
+
+
+
+## HOW TO PLAY
+
+GO TO https://atharv-shukla-987.itch.io/darkness-within
+AND RUN THE GAME
     
     
     
