@@ -7,35 +7,63 @@ In it you have fight mosters and collect coins , emeraleds , diamonds and clear 
 ## FEATURES
 1. Movements ------->
     Left movement
+   
     Right movement
+   
     Jump
+   
     Attack1
+   
     Attack2
+   
     Dash
+   
     Special Dash
+   
     Jump Attack Side
+   
     Jump Attack Up
+   
     Jump Attack Down
    
-2. Animations -------->
+   
+3. Animations -------->
     Idle
+   
     Running
+   
     Dash
+   
     Special Dash
+   
     Attack1
+   
     Attack2
+   
     Jump Attack Side
+   
     Jump Attack Up
+   
     Jump Attack Down
+   
     Fall
+   
     Midair
+   
     Jump
+   
     Dash Attack
+   
     Special Dash Attack
+   
     Damage
+   
+   
     Death
+   
+   
 
-3. Collectables --------------->
+5. Collectables --------------->
     Coins
     diamod
     Emerald
@@ -46,16 +74,29 @@ In it you have fight mosters and collect coins , emeraleds , diamonds and clear 
 ##CONTROLS
 
 LEFT ARROW  =  LEFT MOVEMENT
+
 RIGHT ARROW = RIGHT MOVEMENT
+
 SPACE = JUMP
+
 Q = DASH
+
+
 Z = SPECIAL DASH
+
+
 JUMP + ARROW UP = ATTACK UP 
+
 JUMP + ARROW DOWN = ATTACK DOWN
+
 Q +  LEFT CLICK MOUSE = DASH ATTACK
 
 LEFT CLCIK MOUSE ONCE = ATTACK 1 ( LIGHT ATTACK )
+
 LIFT CLICK MOUSE TWICE = ATTACK 2 (HEAVY ATTACK )
+
+
+
 
 
 
