@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://fro0dyexld1n"]
+
+[ext_resource type="AudioStream" uid="uid://ttn5pyc43ctl" path="res://assets/music/04. False Knight.mp3" id="1_xy46p"]
+
+[node name="bgmusic" type="AudioStreamPlayer" unique_id=941928106]
+stream = ExtResource("1_xy46p")
+autoplay = true

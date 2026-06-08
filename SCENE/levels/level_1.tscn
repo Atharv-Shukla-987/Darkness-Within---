@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cgpdu7tr07nb1" path="res://SCENE/collectibles/coins.tscn" id="3_1lsbf"]
 [ext_resource type="PackedScene" uid="uid://ea2qosts53e" path="res://SCENE/collectibles/diamond.tscn" id="4_wtx84"]
 [ext_resource type="PackedScene" uid="uid://b1c1y45sns8ix" path="res://SCENE/collectibles/emerld.tscn" id="5_iqd60"]
+[ext_resource type="PackedScene" uid="uid://chpmeirw4p7ep" path="res://spikeee.tscn" id="6_t2twe"]
 
 [node name="LEVEL1" unique_id=1240564884 instance=ExtResource("1_x33xn")]
 metadata/_edit_horizontal_guides_ = [-211.0]
@@ -86,3 +87,76 @@ position = Vector2(2710, 193)
 
 [node name="emerld2" parent="emrld" parent_id_path=PackedInt32Array(1467083346) index="1" unique_id=532289138 instance=ExtResource("5_iqd60")]
 position = Vector2(123, -31)
+
+[node name="killzone" parent="." index="11" unique_id=629563395 instance=ExtResource("6_t2twe")]
+position = Vector2(1179, 203)
+
+[node name="killzone2" parent="." index="12" unique_id=488512130 instance=ExtResource("6_t2twe")]
+position = Vector2(1307, 200)
+metadata/_edit_group_ = true
+
+[node name="killzone5" parent="." index="13" unique_id=420624864 instance=ExtResource("6_t2twe")]
+position = Vector2(2431, 363)
+
+[node name="killzone6" parent="." index="14" unique_id=35427694 instance=ExtResource("6_t2twe")]
+position = Vector2(2389, 363)
+
+[node name="killzone8" parent="." index="15" unique_id=1236967993 instance=ExtResource("6_t2twe")]
+position = Vector2(2748, 431)
+
+[node name="killzone17" parent="." index="16" unique_id=1501593918 instance=ExtResource("6_t2twe")]
+position = Vector2(2828, 431)
+metadata/_edit_group_ = true
+
+[node name="killzone19" parent="." index="17" unique_id=65896743 instance=ExtResource("6_t2twe")]
+position = Vector2(2952, 434)
+metadata/_edit_group_ = true
+
+[node name="killzone22" parent="." index="18" unique_id=679046375 instance=ExtResource("6_t2twe")]
+position = Vector2(2952, 434)
+metadata/_edit_group_ = true
+
+[node name="killzone20" parent="." index="19" unique_id=918553018 instance=ExtResource("6_t2twe")]
+position = Vector2(2907, 436)
+metadata/_edit_group_ = true
+
+[node name="killzone21" parent="." index="20" unique_id=1497193238 instance=ExtResource("6_t2twe")]
+position = Vector2(2870, 431)
+metadata/_edit_group_ = true
+
+[node name="killzone18" parent="." index="21" unique_id=225523039 instance=ExtResource("6_t2twe")]
+position = Vector2(2707, 430)
+metadata/_edit_group_ = true
+
+[node name="killzone9" parent="." index="22" unique_id=842989186 instance=ExtResource("6_t2twe")]
+position = Vector2(2787, 433)
+
+[node name="killzone14" parent="." index="23" unique_id=1815408384 instance=ExtResource("6_t2twe")]
+position = Vector2(3276, 516)
+
+[node name="killzone15" parent="." index="24" unique_id=1920645205 instance=ExtResource("6_t2twe")]
+position = Vector2(3243, 518)
+
+[node name="killzone16" parent="." index="25" unique_id=1493558874 instance=ExtResource("6_t2twe")]
+position = Vector2(3204, 522)
+
+[node name="killzone13" parent="." index="26" unique_id=2113451328 instance=ExtResource("6_t2twe")]
+position = Vector2(2666, 434)
+
+[node name="killzone7" parent="." index="27" unique_id=261780603 instance=ExtResource("6_t2twe")]
+position = Vector2(2349, 365)
+
+[node name="killzone3" parent="." index="28" unique_id=1604831481 instance=ExtResource("6_t2twe")]
+position = Vector2(1262, 201)
+
+[node name="killzone4" parent="." index="29" unique_id=657161030 instance=ExtResource("6_t2twe")]
+position = Vector2(1231, 217)
+
+[node name="killzone10" parent="." index="30" unique_id=1665430493 instance=ExtResource("6_t2twe")]
+position = Vector2(3627, 599)
+
+[node name="killzone11" parent="." index="31" unique_id=1196392341 instance=ExtResource("6_t2twe")]
+position = Vector2(3582, 600)
+
+[node name="killzone12" parent="." index="32" unique_id=1678002405 instance=ExtResource("6_t2twe")]
+position = Vector2(3544, 602)

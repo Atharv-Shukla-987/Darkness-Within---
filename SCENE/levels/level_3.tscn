@@ -1,6 +1,9 @@
 [gd_scene format=4 uid="uid://cqo7v3lw2185v"]
 
 [ext_resource type="PackedScene" uid="uid://bp64slskagvgc" path="res://SCENE/levelblueprint.tscn" id="1_ohond"]
+[ext_resource type="PackedScene" uid="uid://cgpdu7tr07nb1" path="res://SCENE/collectibles/coins.tscn" id="2_w166l"]
+[ext_resource type="PackedScene" uid="uid://ea2qosts53e" path="res://SCENE/collectibles/diamond.tscn" id="3_xtvwf"]
+[ext_resource type="PackedScene" uid="uid://b1c1y45sns8ix" path="res://SCENE/collectibles/emerld.tscn" id="4_o3syq"]
 
 [node name="level3" unique_id=1240564884 instance=ExtResource("1_ohond")]
 
@@ -9,3 +12,93 @@ tile_map_data = PackedByteArray("AAAGAP//AAAGAAEAAAAGAAAAAAAGAAIAAAAGAAEAAAAFAAQ
 
 [node name="Area2D" parent="." index="5" unique_id=762294064]
 position = Vector2(5167, -21)
+
+[node name="coins" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="0" unique_id=1242531394]
+position = Vector2(2215, -267)
+
+[node name="coins11" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="1" unique_id=1602107804 instance=ExtResource("2_w166l")]
+position = Vector2(2353, -363)
+
+[node name="coins12" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="2" unique_id=191428416 instance=ExtResource("2_w166l")]
+position = Vector2(2545, -392)
+
+[node name="coins13" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="3" unique_id=587078562 instance=ExtResource("2_w166l")]
+position = Vector2(2736, -442)
+
+[node name="coins14" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="4" unique_id=2092352895 instance=ExtResource("2_w166l")]
+position = Vector2(2929, -406)
+
+[node name="coins15" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="5" unique_id=1188764292 instance=ExtResource("2_w166l")]
+position = Vector2(3118, -359)
+
+[node name="coins16" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="6" unique_id=1055014281 instance=ExtResource("2_w166l")]
+position = Vector2(3307, -327)
+
+[node name="coins17" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="7" unique_id=1248030002 instance=ExtResource("2_w166l")]
+position = Vector2(3455, -235)
+
+[node name="coins18" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="8" unique_id=1945461326 instance=ExtResource("2_w166l")]
+position = Vector2(3656, -181)
+
+[node name="coins19" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="9" unique_id=1936292489 instance=ExtResource("2_w166l")]
+position = Vector2(3838, -155)
+
+[node name="coins20" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="10" unique_id=1241048226 instance=ExtResource("2_w166l")]
+position = Vector2(4001, -76)
+
+[node name="coins21" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="11" unique_id=1673903764 instance=ExtResource("2_w166l")]
+position = Vector2(4185, -31)
+
+[node name="coins22" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="12" unique_id=465640748 instance=ExtResource("2_w166l")]
+position = Vector2(4386, 8)
+
+[node name="coins10" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="13" unique_id=445102111]
+position = Vector2(2016, -216)
+
+[node name="coins23" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="18" unique_id=73801266 instance=ExtResource("2_w166l")]
+position = Vector2(774, -50)
+
+[node name="coins24" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="19" unique_id=1132278855 instance=ExtResource("2_w166l")]
+position = Vector2(649, -44)
+
+[node name="coins25" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="20" unique_id=985149368 instance=ExtResource("2_w166l")]
+position = Vector2(735, -43)
+
+[node name="coins26" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="21" unique_id=644390109 instance=ExtResource("2_w166l")]
+position = Vector2(693, -42)
+
+[node name="coins27" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="22" unique_id=770227139 instance=ExtResource("2_w166l")]
+position = Vector2(5607, -56)
+
+[node name="coins28" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="23" unique_id=1907078661 instance=ExtResource("2_w166l")]
+position = Vector2(5482, -50)
+
+[node name="coins29" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="24" unique_id=471518830 instance=ExtResource("2_w166l")]
+position = Vector2(5568, -49)
+
+[node name="coins30" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="25" unique_id=376654608 instance=ExtResource("2_w166l")]
+position = Vector2(5526, -48)
+
+[node name="coins6" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="26" unique_id=994696012]
+position = Vector2(1821, -185)
+
+[node name="coins7" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="27" unique_id=2084166315]
+position = Vector2(1286, -37)
+
+[node name="coins8" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="28" unique_id=665121303]
+position = Vector2(1468, -59)
+
+[node name="coins9" parent="coins" parent_id_path=PackedInt32Array(1797952101) index="29" unique_id=360058614]
+position = Vector2(1667, -108)
+
+[node name="diamond" parent="diamonds" parent_id_path=PackedInt32Array(1095665519) index="0" unique_id=1823843863]
+position = Vector2(318, -998)
+
+[node name="diamond2" parent="diamonds" parent_id_path=PackedInt32Array(1095665519) index="1" unique_id=160400565 instance=ExtResource("3_xtvwf")]
+position = Vector2(318, -998)
+
+[node name="emerld" parent="emrld" parent_id_path=PackedInt32Array(1467083346) index="0" unique_id=532289138]
+position = Vector2(194, -975)
+
+[node name="emerld2" parent="emrld" parent_id_path=PackedInt32Array(1467083346) index="1" unique_id=898100578 instance=ExtResource("4_o3syq")]
+position = Vector2(194, -975)

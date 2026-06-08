@@ -213,6 +213,7 @@ func takedamage(amt : int) -> void:
 	hp = hp-amt
 	if hp <= 0:
 		_death()
+		get_tree().reload_current_scene()
 	else:
 		_setstates(states.TAKEDAMAGE)
 	

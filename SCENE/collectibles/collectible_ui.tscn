@@ -4,10 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://bxei404rng78q" path="res://assets/collectibles/coin/1.png" id="2_6rl8t"]
 [ext_resource type="Texture2D" uid="uid://jvp74ply6s0q" path="res://assets/collectibles/diamond/3.png" id="3_jpr7d"]
 [ext_resource type="Texture2D" uid="uid://by36tqqwf5pfo" path="res://assets/collectibles/gem/3.png" id="4_5m1xu"]
+[ext_resource type="Texture2D" uid="uid://by2rs0557c2ly" path="res://assets/music/IconHeart.png" id="5_6rl8t"]
 
 [sub_resource type="SystemFont" id="SystemFont_r3tk6"]
 font_names = PackedStringArray("Impact")
 subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_jpr7d"]
+font_names = PackedStringArray("Impact")
 
 [node name="collectible ui" type="Control" unique_id=792574142]
 layout_mode = 3
@@ -76,3 +80,21 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("SystemFont_r3tk6")
 theme_override_font_sizes/font_size = 25
 text = "0"
+
+[node name="health" type="TextureRect" parent="." unique_id=1739634155]
+layout_mode = 0
+offset_left = 14.924999
+offset_top = 75.0
+offset_right = 54.925
+offset_bottom = 115.0
+texture = ExtResource("5_6rl8t")
+
+[node name="Label" type="Label" parent="health" unique_id=1580222278]
+layout_mode = 0
+offset_left = 58.0
+offset_top = -3.0
+offset_right = 110.0
+offset_bottom = 42.0
+theme_override_fonts/font = SubResource("SystemFont_jpr7d")
+theme_override_font_sizes/font_size = 30
+text = "100"
